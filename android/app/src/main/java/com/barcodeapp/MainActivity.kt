@@ -14,8 +14,9 @@ class MainActivity : ReactActivity() {
   override fun getMainComponentName(): String = "BarcodeApp"
 
   /**
-   * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
-   * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
+   * Returns the instance of the [ReactActivityDelegate]. Here we use a util class [
+   * DefaultReactActivityDelegate] which allows you to easily enable Fabric and Concurrent React
+   * (aka React 18) with two boolean flags.
    */
   override fun createReactActivityDelegate(): ReactActivityDelegate =
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
